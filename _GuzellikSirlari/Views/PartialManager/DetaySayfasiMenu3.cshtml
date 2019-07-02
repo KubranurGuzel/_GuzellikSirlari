@@ -1,0 +1,18 @@
+﻿@model _GuzellikSirlari.Models.CiltSorunlari
+@{
+    ViewBag.Title = "DetaySayfasiMenu3";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div id="about1" class="tm-content-box">
+        <div class="tm-box-pad tm-bordered-box">
+            <h2 class="tm-section-title">@Html.DisplayFor(model => model.CiltSorunlariAdi, new { htmlAttributes = new { @class = "form-control" } })</h2>
+            <p>@Html.DisplayFor(model => model.CiltSorunlariAciklama, new { htmlAttributes = new { @class = "form-control" } })</p>
+
+        </div>
+    </div>
+}
+

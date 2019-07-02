@@ -1,0 +1,41 @@
+﻿@model IEnumerable<_GuzellikSirlari.Models.Iletisim>
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+@using Microsoft.AspNet.Identity
+@if (Session["KullaniciId"] != null)
+{
+    <div id="about1" class="tm-content-box">
+        <div class="tm-box-pad tm-bordered-box">
+            <h2>İletişim</h2>
+
+            <p>
+               <br />
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        Adı
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Adi)
+                        </td>
+
+                        <td>
+                            @Html.ActionLink("Detaylar", "IletisimDetaylar", new { IletisimId = item.IletisimId }) |
+                            @Html.ActionLink("Sil", "IletisimSil", new { IletisimId = item.IletisimId })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+}

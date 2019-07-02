@@ -1,0 +1,76 @@
+﻿@model List<_GuzellikSirlari.Models.CiltSagligi> 
+@{
+    Layout = null;
+}
+
+ <!---2.menü-->
+<section id="gallery" class="tm-content-box">
+    <div class="tm-content-box tm-content-box-home">
+        <img src="~/Content/img/cilt_guzelligi.jpg" alt="Image 1" class="img-fluid tm-welcome-img">
+        <div class="tm-welcome-boxes-container">
+            <div class="tm-welcome-box">
+                <div class="tm-welcome-text">
+                    <h2 class="tm-section-title">Cilt Sağlığı Nedir?</h2>
+                    <p>Cilt yaşlanmasını durdurmak elimizde olan bir durum değil ancak bu sürecin daha yavaş ve en önemlisi sağlıklı bir şekilde ilerlemesi bizim elimizde. </p>
+                </div>
+                <a class="tm-welcome-link tm-button">Cilt Sağlığı </a>
+            </div>
+            <div class="tm-welcome-box">
+                <div class="tm-welcome-text">
+                    <h2 class="tm-section-title">Cilt Sağlığı Gerekli Mi?</h2>
+                    <p>Güzel bir cilde sahip olmada genlerin yanı sıra cilt bakımına özen göstermek de önemli rol oynuyor.</p>
+                </div>
+                <a class="tm-welcome-link tm-button">Cilt Sağlığı</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<div id="gallery1" class="tm-content-box">
+    <div class="grid tm-gallery">
+        <figure class="effect-bubba">
+            <img src="~/Content/img/cilt_sagligi1.jpg" alt="Image 8" class="img-fluid">
+            <figcaption>
+                <h2>Cİlt<br /> <span>Sağlığı</span></h2>
+            
+                <a href="~/Content/img/cilt_sagligi1.jpg">View more</a>
+            </figcaption>
+        </figure>
+
+        <figure class="effect-bubba">
+            <img src="~/Content/img/cilt_sagligi2.jpg" alt="Image 7" class="img-fluid">
+            <figcaption>
+                <h2>Cİlt<br /> <span>Sağlığı</span></h2>
+        
+                <a href="~/Content/img/cilt_sagligi2.jpg">View more</a>
+            </figcaption>
+        </figure>
+
+        <figure class="effect-bubba">
+            <img src="~/Content/img/cilt_sagligi3.jpg" alt="Image 5" class="img-fluid">
+            <figcaption>
+                <h2>Cİlt<br /> <span>Sağlığı</span></h2>
+         
+                <a href="~/Content/img/cilt_sagligi3.jpg">View more</a>
+            </figcaption>
+        </figure>
+
+   
+    </div>
+</div>
+
+<div id="services1" class="tm-content-box tm-gray-bg tm-services">
+
+    <div class="tm-services-img-container">
+        <img src="~/Content/img/cilt_sagligidik.jpg" alt="Green Field" class="img-fluid tm-services-img">
+    </div>
+
+    <div class="tm-box-pad tm-services-description-container">
+        <h2 class="tm-section-title"><span class="tm-blue-text">Cilt Sağlığı</span> </h2>
+@foreach (var item in Model)
+{
+        <p class="tm-section-description">@Html.ActionLink(@item.CiltSagligiAdi, "DetaySayfasiMenu2", new { CiltSagligiId = item.CiltSagligiId })</p> 
+}
+    </div>
+
+</div>

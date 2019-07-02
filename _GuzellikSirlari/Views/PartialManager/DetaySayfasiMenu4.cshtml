@@ -1,0 +1,18 @@
+﻿@model _GuzellikSirlari.Models.DogalMaskeler
+@{
+    ViewBag.Title = "DetaySayfasiMenu4";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div id="about1" class="tm-content-box">
+        <div class="tm-box-pad tm-bordered-box">
+            <h2 class="tm-section-title">@Html.DisplayFor(model => model.DogalMaskelerAdi, new { htmlAttributes = new { @class = "form-control" } })</h2>
+            <p>@Html.DisplayFor(model => model.DogalMaskelerAciklama, new { htmlAttributes = new { @class = "form-control" } })</p>
+
+        </div>
+    </div>
+}

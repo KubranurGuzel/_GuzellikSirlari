@@ -1,0 +1,47 @@
+﻿@model _GuzellikSirlari.Models.DogalMaskeler
+@{
+    ViewBag.Title = "DogalMaskelerSil";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+@using Microsoft.AspNet.Identity
+@if (Session["KullaniciId"] != null)
+{
+    <div id="about1" class="tm-content-box">
+        <div class="tm-box-pad tm-bordered-box">
+
+            <h4>Doğal Maskeler</h4>
+            <h3>Silmek istediğine emin misin?</h3>
+            <div>
+
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        Doğal Maskeler Adı
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.DogalMaskelerAdi)
+                    </dd>
+
+                    <dt>
+                        Doğal Maskeler Açıklama
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.DogalMaskelerAciklama)
+                    </dd>
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Sil" class="btn btn-default" /> |
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}

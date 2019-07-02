@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="~/guzellikfavicon.png">
+    <title>Güzellik Sırları</title>
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400">
+
+    <link href="~/Content/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/magnific-popup.css" rel="stylesheet" />
+    <link href="~/Content/css/templatemo-style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <section id="welcome" class="tm-content-box tm-banner margin-b-10">
+            <div class="tm-banner-inner">
+                <h1 class="tm-banner-title">Güzellİk Sırları</h1>
+            </div>
+        </section>
+
+        <div class="tm-body">
+            <div class="tm-sidebar">
+                <nav class="tm-main-nav">
+                    <ul class="tm-main-nav-ul">
+                        <li class="tm-nav-item">                   
+                            <a href="@Url.Action("Index", "Home")" class="tm-nav-item-link tm-button">
+                                <i class="fa fa-smile-o tm-nav-fa"></i>Cilt Bakımı
+                            </a>
+                        </li>
+                        <li class="tm-nav-item">
+                            <a href="@Url.Action("Index", "Home")" class="tm-nav-item-link tm-button">
+                                <i class="fa fa-image tm-nav-fa"></i>Cilt Sağlığı
+                            </a>
+                        </li>
+                        <li class="tm-nav-item">
+                            <a href="@Url.Action("Index", "Home")" class="tm-nav-item-link tm-button">
+                                <i class="fa fa-tasks tm-nav-fa"></i>Cilt Sorunları
+                            </a>
+                        </li>
+                        <li class="tm-nav-item">
+                            <a href="@Url.Action("Index", "Home")" class="tm-nav-item-link tm-button">
+                                <i class="fa fa-sitemap tm-nav-fa"></i>Doğal Maskeler
+                            </a>
+                        </li>
+                        <li class="tm-nav-item">
+                            <a href="@Url.Action("Index", "Home")" class="tm-nav-item-link tm-button">
+                                <i class="fa fa-envelope-o tm-nav-fa"></i>İletişim
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="tm-main-content">
+
+                @RenderBody()
+                <footer class="tm-footer">
+                    <p class="text-xs-center">Copyright &copy; 2019  &nbsp;Güzellik Sırları </p>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- load JS files -->
+    <script src="~/Content/js/jquery-1.11.3.min.js"></script>
+    <script src="~/Content/js/jquery.singlePageNav.min.js"></script>
+    <script src="~/Content/js/jquery.magnific-popup.min.js"></script>
+
+ 
+
+
+      
+</body>
+</html>

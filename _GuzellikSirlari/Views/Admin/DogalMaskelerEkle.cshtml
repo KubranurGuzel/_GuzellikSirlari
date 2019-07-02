@@ -1,0 +1,46 @@
+﻿@model _GuzellikSirlari.Models.DogalMaskeler
+@{
+    ViewBag.Title = "DogalMaskelerEkle";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+@using Microsoft.AspNet.Identity
+@if (Session["KullaniciId"] != null)
+{
+
+    using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div id="about1" class="tm-content-box">
+            <div class="tm-box-pad tm-bordered-box">
+
+                <div class="form-horizontal">
+                    <h4>Doğal Maskeler</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <p style="float:left"> &nbsp&nbsp&nbsp&nbsp Doğal Maskeler Adı</p><br />
+                        <div class="col-md-10">
+                            <input type="text" id="contact_name" name="DogalMaskelerAdi" class="form-control" placeholder="Adınız" required />
+                            <br />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <br />  <p style="float:left"> &nbsp&nbsp&nbsp&nbsp Doğal Maskeler Açıklama</p><br />
+                        <div class="col-md-10">
+                            <input type="text" id="contact_name" name="DogalMaskelerAciklama" class="form-control" placeholder="Açıklama" required /><br />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Ekle" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+                <br /> <br /><br /><br /><br /><br />
+            </div>
+        </div>
+    }
+}
+

@@ -1,0 +1,44 @@
+﻿@model _GuzellikSirlari.Models.Iletisim
+@{
+    Layout = null;
+}
+<section id="contact" class="tm-content-box">
+
+    <div class="tm-flex">
+        <div class="tm-contact-left-half tm-gray-bg">
+            <div class="tm-contact-inner-pad">
+                <h2 class="tm-section-title">İletişim</h2>
+                <form action="#contact" method="post" class="contact-form">
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                     
+                        <input type="text" id="contact_name" name="Adi" class="form-control" placeholder="Adınız" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact_email" name="Email" class="form-control" placeholder="Email" required />
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact_message" name="Aciklama" class="form-control" rows="9" placeholder="Mesajınız" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary pull-xs-right tm-button tm-button-normal">Gönder</button>
+}
+                </form>
+            </div>
+        </div>
+
+        <div class="tm-contact-right-half tm-purple-bg">
+            <div class="tm-address-box">
+                <h2 class="tm-section-title">Konumumuz</h2>
+                <address>
+                    2005 yılından günümüze <br />
+                    kadar sizinleyiz.
+                </address>
+            </div>
+            <div id="google-map"></div>
+        </div>
+    </div>
+
+</section>

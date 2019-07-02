@@ -1,0 +1,75 @@
+﻿@model List<_GuzellikSirlari.Models.CiltBakimi>
+@{
+    Layout = null;
+}
+ <!--1.menü-->
+<div class="tm-content-box tm-content-box-home">
+    <img src="~/Content/img/336561.jpg" alt="Image 1" class="img-fluid tm-welcome-img">
+    <div class="tm-welcome-boxes-container">
+        <div class="tm-welcome-box">
+            <div class="tm-welcome-text">
+                <h2 class="tm-section-title">Cilt Bakımı Nedir?</h2>
+                <p>Cildi iyileştirmek için düzenli olarak uygulanan bakımların tümüdür. </p>
+            </div>
+            <a class="tm-welcome-link tm-button">Cilt Bakımı </a>
+        </div>
+        <div class="tm-welcome-box">
+            <div class="tm-welcome-text">
+                <h2 class="tm-section-title">Cilt Bakımı Gerekli Mi?</h2>
+                <p>Parlak ve pürüzsüz bir görünüm, doğru cilt bakımı ile başlar.</p>
+            </div>
+            <a class="tm-welcome-link tm-button">Cilt Bakımı</a>
+        </div>
+
+    </div>
+</div>
+
+<div id="gallery1" class="tm-content-box">
+    <div class="grid tm-gallery">
+        <figure class="effect-bubba">
+            <img src="~/Content/img/cilt_bakimi1.jpg" alt="Image 8" class="img-fluid">
+            <figcaption>
+                <h2>Cİlt<br /><span>Bakımı</span></h2>
+            
+                <a href="~/Content/img/cilt_bakimi1.jpg">View more</a>
+            </figcaption>
+        </figure>
+
+        <figure class="effect-bubba">
+            <img src="~/Content/img/cilt_bakimi2.jpg" alt="Image 7" class="img-fluid">
+            <figcaption>
+                <h2>Cİlt<br /><span>Bakımı</span></h2>
+              
+                <a href="~/Content/img/cilt_bakimi2.jpg">View more</a>
+            </figcaption>
+        </figure>
+
+        <figure class="effect-bubba">
+            <img src="~/Content/img/cilt_bakimi3.jpg" alt="Image 5" class="img-fluid">
+            <figcaption>
+                <h2>Cİlt<br /><span>Bakımı</span></h2>
+         
+                <a href="~/Content/img/cilt_bakimi3.jpg">View more</a>
+            </figcaption>
+        </figure>
+
+      
+    </div>
+</div>
+
+<div id="services2" class="tm-content-box tm-gray-bg tm-services">
+
+    <div class="tm-services-img-container">
+        <img src="~/Content/img/cilt_bakimidik.jpg" alt="Green Field" class="img-fluid tm-services-img">
+    </div>
+
+    <div class="tm-box-pad tm-services-description-container">
+        <h2 class="tm-section-title"><span class="tm-blue-text">Cilt Bakımı</span> </h2>
+@foreach (var item in Model)
+{
+        <p class="tm-section-description">@Html.ActionLink(@item.CiltBakimiAdi, "DetaySayfasiMenu1", new { CiltBakimiId = item.CiltBakimiId }) </p>
+}
+    </div>
+
+</div>
+

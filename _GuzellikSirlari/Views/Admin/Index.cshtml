@@ -1,0 +1,19 @@
+﻿@model _GuzellikSirlari.Models.Kullanici
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+@using (Html.BeginForm())
+{
+<div id="about1" class="tm-content-box">
+    <div class="tm-box-pad tm-bordered-box">
+        <h2 class="tm-section-title"> Kullanıcı Adı</h2>
+        <p> @Html.TextBoxFor(m => m.KullaniciId)</p>
+        <br />
+        <h2 class="tm-section-title"> Kullanıcı Şifre</h2>
+        <p> @Html.PasswordFor(m => m.KullaniciSifre)</p>
+        <br />
+        <p> <input type="submit" name="Kaydet" value="Giriş Yap" /></p>
+</div>
+</div>
+}

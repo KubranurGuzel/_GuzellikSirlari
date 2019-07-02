@@ -1,0 +1,41 @@
+﻿@model IEnumerable<_GuzellikSirlari.Models.CiltSorunlari>
+@{
+    ViewBag.Title = "CiltSorunlari";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+@using Microsoft.AspNet.Identity
+@if (Session["KullaniciId"] != null)
+{
+    <div id="about1" class="tm-content-box">
+        <div class="tm-box-pad tm-bordered-box">
+            <h2>Cilt Sorunları</h2>
+
+            <p>
+                @Html.ActionLink("Yeni Ekle", "CiltSorunlariEkle")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        Cilt Sorunları Adı
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CiltSorunlariAdi)
+                        </td>
+
+                        <td>
+                            @Html.ActionLink("Detaylar", "CiltSorunlariDetaylar", new { CiltSorunlariId = item.CiltSorunlariId }) |
+                            @Html.ActionLink("Sil", "CiltSorunlariSil", new { CiltSorunlariId = item.CiltSorunlariId })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+}
